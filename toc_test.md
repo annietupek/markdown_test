@@ -2,12 +2,12 @@
 
 Table of Contents
 
-* [Overview](#markdown-header-overview)
-* [Scenarios](#markdown-header-scenarios)
-* [Usage](#markdown-header-usage)
-* [Prerequisites](#markdown-header-prerequisites)
-	* [Running the playbooks](#markdown-header-running-the-playbooks)
-	* [bootstrap.yml](#markdown-header-bootstrapyml)
+* [Overview](#user-content-overview)
+* [Scenarios](#user-content-scenarios)
+* [Usage](#user-content-usage)
+* [Prerequisites](#user-content-prerequisites)
+	* [Running the playbooks](#user-content-running-the-playbooks)
+	* [bootstrap.yml](#user-content-bootstrapyml)
 	* [Common to all playbooks](#markdown-header-common-to-all-provisioning-playbooks)
 	* [provision_core.yml](#markdown-header-provision_coreyml)
 	* [provision_enablement.yml](#markdown-header-provision_enablementyml)
@@ -35,8 +35,8 @@ This project has both common and team-specific playbooks.  Everyone should run
 * [bootstrap](#markdown-header-bootstrapyml)
 * [Core](#markdown-header-provision_coreyml)
 * [Enablement](#markdown-header-provision_enablementyml)
-* [Helios](#markdown-header-provision_heliosyml)
-* [OSCC](#markdown-header-provision_osccyml)
+* [Helios](#user-content-provision_heliosyml)
+* [OSCC](#user-content-provision_osccyml)
 
 # Usage
 Assumes the polysync-ansible repository is in the user's home directory.
