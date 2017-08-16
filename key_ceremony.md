@@ -12,7 +12,7 @@ Table of Contents
         + [Outcome](#outcome_root_key_gen)
     + [Yubikey Provisioning](#yubikey-provisioning)
         + [Outcome](#outcome_yubikey_provisioning)
-    + [Employee Key Generation + Security Device Provisioning](#employee-key-generation-+-security-device-provisioning)
+    + [Employee Key Generation and Security Device Provisioning](#employee-key-generation-and-security-device-provisioning)
         + [Outcome](#outcome_employee_key_gen)
     + [Change Root Key Passphrase](#change-root-key-passphrase)
         + [Outcome](#outcome_change_root_key_passphrase)
@@ -69,7 +69,7 @@ This project has several playbooks depending on the situation.
 
 * [Root Key Generation](#root-key-generation)
 * [Yubikey Provisioning](#yubikey-provisioning)
-* [Employee Key Generation + Security Device Provisioning](#employee-key-generation-+-security-device-provisioning)
+* [Employee Key Generation amd Security Device Provisioning](#employee-key-generation-and-security-device-provisioning)
 * [Change Root Key Passphrase](#change-root-key-passphrase)
 * [Change Executive Key Passphrase](#change-executive-key-passphrase)
 * [Change Employee Key Passphrase](#change-employee-key-passphrase)
@@ -134,11 +134,11 @@ See the top-level [README](../README.md) for instructions on installing Ansible.
         $ cd ~/polysync-ansible/key-ceremony
         $ ansible-playbook -i inventory/hosts provision_yubikey.yml
 
-    ### <a name="yubikey-provisioning"></a>Outcome
+    ### <a name="outcome_yubikey-provisioning"></a>Outcome
 
     * Yubikey pre-provisioned for employee
 
-* ## Employee Key Generation + Security Device Provisioning
+* ## Employee Key Generation and Security Device Provisioning
 
     This playbook generates the employee gpg key and exports it to the employee's Yubikey.
 
