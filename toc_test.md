@@ -2,18 +2,24 @@
 
 Table of Contents
 
-* [Overview](#user-content-overview)
-* [Scenarios](#user-content-scenarios)
-* [Usage](#user-content-usage)
-* [Prerequisites](#user-content-prerequisites)
-	* [Running the playbooks](#user-content-running-the-playbooks)
-	* [bootstrap.yml](#user-content-bootstrapyml)
-	* [Common to all playbooks](#markdown-header-common-to-all-provisioning-playbooks)
-	* [provision_core.yml](#markdown-header-provision_coreyml)
-	* [provision_enablement.yml](#markdown-header-provision_enablementyml)
-	* [provision_helios.yml](#markdown-header-provision_heliosyml)
-	* [provision_oscc.yml](#markdown-header-provision_osccyml)
-	* [Additional Information](#markdown-header-additional-information)
+* [Overview](#Overview)
+* [Scenarios](#Scenarios)
+* [Usage](#Usage)
+* [Prerequisites](#Prerequisites)
+	* [Running the playbooks](#Running-the-playbooks)
+	* [bootstrap.yml](#bootstrap.yml)
+		* [Outcome](#Outcome_boostrap)
+	* [Common to all playbooks](#Common-to-all-provisioning-playbooks)
+		* [Outcome](#Outcome_common)
+	* [provision_core.yml](#Provision_core.yml)
+		* [Outcome](#Outcome_core)
+	* [provision_enablement.yml](#Provision_enablement.yml)
+		* [Outcome](#Outcome_enablement)
+	* [provision_helios.yml](#Provision_helios.yml)
+		* [Outcome](#Outcome_helios)
+	* [provision_oscc.yml](#Provision_oscc.yml)
+		* [Outcome](#Outcome_oscc)
+	* [Additional Information](#markdown-header-additional-steps)
 
 # Overview
 
@@ -32,11 +38,11 @@ This project has both common and team-specific playbooks.  Everyone should run
 	the bootstrap playbook.  You should also run the playbook for your respective
 	team.
 
-* [bootstrap](#markdown-header-bootstrapyml)
-* [Core](#markdown-header-provision_coreyml)
-* [Enablement](#markdown-header-provision_enablementyml)
-* [Helios](#user-content-provision_heliosyml)
-* [OSCC](#user-content-provision_osccyml)
+* [bootstrap](#bootstrap.yml)
+* [Core](#provision_core.yml)
+* [Enablement](#provision_enablement.yml)
+* [Helios](#provision_helios.yml)
+* [OSCC](#provision_oscc.yml)
 
 # Usage
 Assumes the polysync-ansible repository is in the user's home directory.
@@ -60,7 +66,7 @@ You must also have the sudo privileges for the machine you are running the playb
 		$ cd ~/polysync-ansible/employee-laptop
 		$ ansible-playbook bootstrap.yml -K
 
-	### Outcome
+	### <a name="Outcome_boostrap"></a>Outcome
 
 	* Creates an `ansible` user for later automation and configures the admins
 		(Engineering Enablement Team) who can connect to the machine so future
@@ -73,7 +79,7 @@ You must also have the sudo privileges for the machine you are running the playb
 	* All team-specific playbooks call the workstation role's install and laptop
 		tasks and the builder role's install task.
 
-	### Outcome
+	### <a name="Outcome_common"></a>Outcome
 
 	* The workstation and builder install tasks install tools and dependencies
 		common to all teams:
@@ -95,7 +101,7 @@ You must also have the sudo privileges for the machine you are running the playb
 
 		$ ansible-playbook provision_core.yml -K
 
-	### Outcome
+	### <a name="Outcome_core"></a>Outcome
 
 	Core Team dependencies will be installed on the employee laptop.
 	These include:
@@ -116,7 +122,7 @@ You must also have the sudo privileges for the machine you are running the playb
 
 		$ ansible-playbook provision_enablement.yml -K
 
-	### Outcome
+	### <a name="Outcome_enablement"></a>Outcome
 
 	Engineering Enablement Team dependencies will be installed on the employee laptop.
 	These include:
@@ -134,7 +140,7 @@ You must also have the sudo privileges for the machine you are running the playb
 		$ ansible-playbook provision_helios.yml -K
 
 
-	### Outcome
+	### <a name="Outcome_helios"></a>Outcome
 
 	Helios Team dependencies will be installed on the employee laptop.
 	These include:
@@ -149,7 +155,7 @@ You must also have the sudo privileges for the machine you are running the playb
 
 		$ ansible-playbook provision_oscc.yml -K
 
-	### Outcome
+	### <a name="Outcome_oscc"></a>Outcome
 
 	OSCC Team dependencies will be installed on the employee laptop.
 	These include:
@@ -158,7 +164,7 @@ You must also have the sudo privileges for the machine you are running the playb
 	* Test dependencies
 	* Rust
 
-## Additional Steps
+## Additional Information
 If the employee already has their Yubikey and gpg set up, additional configuration
 	commands will need to be run.
 
