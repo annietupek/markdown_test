@@ -5,7 +5,7 @@ Table of Contents
 + [Overview](#overview)
 + [Scenarios](#scenarios)
 + [Usage](#usage)
-+ [Prerequisites](prerequisites)
++ [Prerequisites](#prerequisites)
 	+ [Running the playbooks](#running-the-playbooks)
 	+ [Provisioning build machines](#provisioning-build-machines)
 		+ [Outcome](#outcome-build-machines)
