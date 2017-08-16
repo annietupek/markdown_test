@@ -36,7 +36,7 @@ See the top-level [README](../README.md) for instructions on installing Ansible.
 
 ## Running the playbooks
 
-* ## Provisioning build machines
+* ## Provisioning Build Machines
 
 	This playbook sets up the build machines with Jenkins and all necessary
 		dependencies for building PolySync projects.

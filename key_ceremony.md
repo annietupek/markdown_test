@@ -9,23 +9,23 @@ Table of Contents
 + [Prerequisites](#prerequisites)
     + [Running the playbooks](#running-the-playbooks)
     + [Root Key Generation](#root-key-generation)
-        + [Outcome](#outcome_root_key_gen)
+        + [Outcome](#outcome-root-key-gen)
     + [Yubikey Provisioning](#yubikey-provisioning)
-        + [Outcome](#outcome_yubikey_provisioning)
+        + [Outcome](#outcome-yubikey-provisioning)
     + [Employee Key Generation and Security Device Provisioning](#employee-key-generation-and-security-device-provisioning)
-        + [Outcome](#outcome_employee_key_gen)
+        + [Outcome](#outcome-employee-key-gen)
     + [Change Root Key Passphrase](#change-root-key-passphrase)
-        + [Outcome](#outcome_change_root_key_passphrase)
+        + [Outcome](#outcome-change-root-key-passphrase)
     + [Change Executive Key Passphrase](#change-executive-key-passphrase)
-        + [Outcome](#outcome_change_exec_key_passphrase)
+        + [Outcome](#outcome-change-exec-key-passphrase)
     + [Change Employee Key Passphrase](#change-employee-key-passphrase)
-        + [Outcome](#outcome_change_employee_key_passphrase)
+        + [Outcome](#outcome-change-employee-key-passphrase)
     + [Root Certifies Executive Key](#root-certifies-executive-key)
-        + [Outcome](#outcome_root_certifies_exec)
+        + [Outcome](#outcome-root-certifies-exec)
     + [Executive Certifies Employee Key](#executive-certifies-employee-key)
-        + [Outcome](#outcome_exec_certifies_employee)
+        + [Outcome](#outcome-exec-certifies-employee)
     + [Synchronize HSMs](#synchronize-hsms)
-        + [Outcome](#outcome_sync_hsms)
+        + [Outcome](#outcome-sync-hsms)
     + [Additional Information](#additional-information)
 
 # Overview
@@ -107,7 +107,7 @@ See the top-level [README](../README.md) for instructions on installing Ansible.
         $ cd ~/polysync-ansible/key-ceremony
         $ ansible-playbook -i inventory/hosts gpg_gen_root_key.yml
 
-    ### <a name="outcome_root_key_gen"></a>Outcome
+    ### <a name="outcome-root-key-gen"></a>Outcome
 
     * New PolySync Root Key
     * New commit in the <Root Key directory> Git repo
@@ -134,7 +134,7 @@ See the top-level [README](../README.md) for instructions on installing Ansible.
         $ cd ~/polysync-ansible/key-ceremony
         $ ansible-playbook -i inventory/hosts provision_yubikey.yml
 
-    ### <a name="outcome_yubikey-provisioning"></a>Outcome
+    ### <a name="outcome-yubikey-provisioning"></a>Outcome
 
     * Yubikey pre-provisioned for employee
 
@@ -154,7 +154,7 @@ See the top-level [README](../README.md) for instructions on installing Ansible.
         $ cd ~/polysync-ansible/key-ceremony
         $ ansible-playbook -i inventory/hosts gpg_gen_key.yml
 
-    ### <a name="outcome_employee_key_gen"></a>Outcome
+    ### <a name="outcome-employee-key-gen"></a>Outcome
 
     * New keys for employee
     * Git pre-configured for employee
@@ -174,7 +174,7 @@ See the top-level [README](../README.md) for instructions on installing Ansible.
         $ cd ~/polysync-ansible/key-ceremony
         $ ansible-playbook -i inventory/hosts <name_of_playbook>.yml
 
-    ### <a name="outcome_change_root_key_passphrase"></a>Outcome
+    ### <a name="outcome-change-root-key-passphrase"></a>Outcome
 
     * Changed Root Key passphrase
     * New commit in <Root Key directory> Git repo
@@ -193,7 +193,7 @@ See the top-level [README](../README.md) for instructions on installing Ansible.
         $ cd ~/polysync-ansible/key-ceremony
         $ ansible-playbook -i inventory/hosts change_executive_passphrase.yml
 
-    ### <a name="outcome_change_exec_key_passphrase"></a>Outcome
+    ### <a name="outcome-change-exec-key-passphrase"></a>Outcome
 
     * Changed Executive Key passphrase
     * Updated Encrypted Executive bundle in <Executive Key directory>
@@ -212,7 +212,7 @@ See the top-level [README](../README.md) for instructions on installing Ansible.
         $ cd ~/polysync-ansible/key-ceremony
         $ ansible-playbook -i inventory/hosts <name_of_playbook>.yml
 
-    ### <a name="outcome_change_employee_key_passphrase"></a>Outcome
+    ### <a name="outcome-change-employee-key-passphrase"></a>Outcome
 
     * Changed Employee Key passphrase
 
@@ -228,7 +228,7 @@ See the top-level [README](../README.md) for instructions on installing Ansible.
         $ cd ~/polysync-ansible/key-ceremony
         $ ansible-playbook -i inventory/hosts root_certifies_executive_key.yml
 
-    ### <a name="outcome_root_certifies_exec"></a>Outcome
+    ### <a name="outcome-root-certifies-exec"></a>Outcome
 
     * Root-certified executive public keys published to pgp.mit.edu
     * HSM unlocked
@@ -246,7 +246,7 @@ See the top-level [README](../README.md) for instructions on installing Ansible.
         $ cd ~/polysync-ansible/key-ceremony
         $ ansible-playbook -i inventory/hosts executive_certifies_employee_key.yml
 
-    ### <a name="outcome_exec_certifies_employee"></a>Outcome
+    ### <a name="outcome-exec-certifies-employee"></a>Outcome
 
     * Executive-certified employee public key published on pgp.mit.edu
     * HSM unlocked
@@ -263,7 +263,7 @@ See the top-level [README](../README.md) for instructions on installing Ansible.
         $ cd ~/polysync-ansible/key-ceremony
         $ ansible-playbook -i inventory/hosts executive_synchonize_hsm.yml
 
-    ### <a name="outcome_sync_hsms"></a>Outcome
+    ### <a name="outcome-sync-hsms"></a>Outcome
 
     * HSMs synchonized
 
