@@ -2,24 +2,24 @@
 
 Table of Contents
 
-* [Overview](#Overview)
-* [Scenarios](#Scenarios)
-* [Usage](#Usage)
-* [Prerequisites](#Prerequisites)
-	* [Running the playbooks](#Running-the-playbooks)
-	* [bootstrap.yml](#bootstrap.yml)
-		* [Outcome](#Outcome_boostrap)
-	* [Common to all playbooks](#Common-to-all-provisioning-playbooks)
-		* [Outcome](#Outcome_common)
-	* [provision_core.yml](#Provision_core.yml)
-		* [Outcome](#Outcome_core)
-	* [provision_enablement.yml](#Provision_enablement.yml)
-		* [Outcome](#Outcome_enablement)
-	* [provision_helios.yml](#Provision_helios.yml)
-		* [Outcome](#Outcome_helios)
-	* [provision_oscc.yml](#Provision_oscc.yml)
-		* [Outcome](#Outcome_oscc)
-	* [Additional Information](#markdown-header-additional-steps)
+* [Overview](#overview)
+* [Scenarios](#scenarios)
+* [Usage](#usage)
+* [Prerequisites](#prerequisites)
+	* [Running the playbooks](#running-the-playbooks)
+	* [bootstrap.yml](#bootstrapyml)
+		* [Outcome](#outcome_boostrap)
+	* [Common to all playbooks](#common-to-all-provisioning-playbooks)
+		* [Outcome](#outcome_common)
+	* [provision_core.yml](#provision_coreyml)
+		* [Outcome](#outcome_core)
+	* [provision_enablement.yml](#provision_enablementyml)
+		* [Outcome](#outcome_enablement)
+	* [provision_helios.yml](#provision_heliosyml)
+		* [Outcome](#outcome_helios)
+	* [provision_oscc.yml](#provision_osccyml)
+		* [Outcome](#outcome_oscc)
+	* [Additional Information](#additional-information)
 
 # Overview
 
@@ -38,11 +38,11 @@ This project has both common and team-specific playbooks.  Everyone should run
 	the bootstrap playbook.  You should also run the playbook for your respective
 	team.
 
-* [bootstrap](#bootstrap.yml)
-* [Core](#provision_core.yml)
-* [Enablement](#provision_enablement.yml)
-* [Helios](#provision_helios.yml)
-* [OSCC](#provision_oscc.yml)
+* [bootstrap](#bootstrapyml)
+* [Core](#provision_coreyml)
+* [Enablement](#provision_enablementyml)
+* [Helios](#provision_heliosyml)
+* [OSCC](#provision_osccyml)
 
 # Usage
 Assumes the polysync-ansible repository is in the user's home directory.
@@ -66,7 +66,7 @@ You must also have the sudo privileges for the machine you are running the playb
 		$ cd ~/polysync-ansible/employee-laptop
 		$ ansible-playbook bootstrap.yml -K
 
-	### <a name="Outcome_boostrap"></a>Outcome
+	### <a name="outcome_boostrap"></a>Outcome
 
 	* Creates an `ansible` user for later automation and configures the admins
 		(Engineering Enablement Team) who can connect to the machine so future
@@ -79,7 +79,7 @@ You must also have the sudo privileges for the machine you are running the playb
 	* All team-specific playbooks call the workstation role's install and laptop
 		tasks and the builder role's install task.
 
-	### <a name="Outcome_common"></a>Outcome
+	### <a name="outcome_common"></a>Outcome
 
 	* The workstation and builder install tasks install tools and dependencies
 		common to all teams:
@@ -101,7 +101,7 @@ You must also have the sudo privileges for the machine you are running the playb
 
 		$ ansible-playbook provision_core.yml -K
 
-	### <a name="Outcome_core"></a>Outcome
+	### <a name="outcome_core"></a>Outcome
 
 	Core Team dependencies will be installed on the employee laptop.
 	These include:
@@ -122,7 +122,7 @@ You must also have the sudo privileges for the machine you are running the playb
 
 		$ ansible-playbook provision_enablement.yml -K
 
-	### <a name="Outcome_enablement"></a>Outcome
+	### <a name="outcome_enablement"></a>Outcome
 
 	Engineering Enablement Team dependencies will be installed on the employee laptop.
 	These include:
@@ -140,7 +140,7 @@ You must also have the sudo privileges for the machine you are running the playb
 		$ ansible-playbook provision_helios.yml -K
 
 
-	### <a name="Outcome_helios"></a>Outcome
+	### <a name="outcome_helios"></a>Outcome
 
 	Helios Team dependencies will be installed on the employee laptop.
 	These include:
@@ -155,7 +155,7 @@ You must also have the sudo privileges for the machine you are running the playb
 
 		$ ansible-playbook provision_oscc.yml -K
 
-	### <a name="Outcome_oscc"></a>Outcome
+	### <a name="outcome_oscc"></a>Outcome
 
 	OSCC Team dependencies will be installed on the employee laptop.
 	These include:
