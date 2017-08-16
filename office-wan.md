@@ -11,7 +11,6 @@ Table of Contents
 		+ [Outcome](#outcome-bootstrap)
 	+ [Provision OPNsense](#provision-opnsense)
 		+ [Outcome](#outcome-provision)
-	+ [Additional Information](#additional-information)
 
 # Overview
 
@@ -38,7 +37,7 @@ You must have admin access to the network.
 
 ## Running the playbooks
 
-* ## Boostrap OPNsense
+* ## Bootstrap OPNsense
 
 	This playbook bootstraps OPNSense on the main router by installing the Ansible
 		sudoer template and the OPNSense config file.
@@ -63,5 +62,3 @@ You must have admin access to the network.
 
 	* After this playbook is run, the OPNsense firewall should be configured on the
 		PolySync network.
-
-## Additional Information
